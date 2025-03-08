@@ -19,6 +19,11 @@ phases:
   # Building docker image
   build:
     commands:
+    - echo "Loggin in docker..."
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_URL"
+
     - echo "Building the docker image..."
     - docker build -t "$DOCKER_URL/$DOCKER_USERNAME/weather-app:latest" .
+
+    - echo "Pushing the docker image..."
     - docker push "$DOCKER_URL/$DOCKER_USERNAME/weather-app:latest"

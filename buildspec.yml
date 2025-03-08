@@ -1,5 +1,11 @@
 version: 0.2
 
+env:
+  parameter-store:
+    DOCKER_USERNAME: /cicd-demo/docker/username
+    DOCKER_PASSWORD: /cicd-demo/docker/password
+    DOCKER_URL: /cicd-demo/docker/docker-registry/url
+
 phases:
   install:
     # Runtime env
@@ -14,5 +20,5 @@ phases:
   build:
     commands:
     - echo "Building the docker image..."
-    - docker build -t "" .
-    - docker push
+    - docker build -t "$DOCKER_URL/$DOCKER_USERNAME/weather-app:latest" .
+    - docker push "$DOCKER_URL/$DOCKER_USERNAME/weather-app:latest"

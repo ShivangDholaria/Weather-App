@@ -39,7 +39,7 @@ jobs:
             -   name: Upload Build Output as Artifact
                 uses: actions/upload-artifact@v4
                 with:
-                    name: build-output
+                    name: app-java-${{matrix.java}}
                     path: target/
 
     upload:

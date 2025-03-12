@@ -43,6 +43,10 @@ jobs:
                     path: target/
 
     upload:
+        strategy:
+            matrix: 
+                java: ['21', '23']
+
         name: Stage 3 - Upload Artifact
         runs-on: ubuntu-latest
         needs: build

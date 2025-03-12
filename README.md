@@ -20,7 +20,7 @@ Navigate into the directory and update the `api.key` value in `application.prope
 
 Make sure to add you API Key for the OpenWeather API in the `application.properties` file so that your app runs perfectly.
 
-To implement a complete CICD solution, [visit this site!](https://github.com/ShivangDholaria/CICD/tree/main/CICD%20Pipeline%20for%20weather%20App)
+To implement a complete CICD solution, [visit here!](https://github.com/ShivangDholaria/CICD/tree/main/CICD%20Pipeline%20for%20weather%20App)
 
 ## Docker Deployment
 
